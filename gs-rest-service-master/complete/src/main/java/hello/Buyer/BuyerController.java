@@ -26,7 +26,7 @@ public class BuyerController {
 
 	@RequestMapping("/testBuyer")
     public Greeting TestBuyer(@RequestParam(value="name", defaultValue="World") String name) {
-        return new Greeting(12, "testing");
+        return new Greeting(12, "tesfdsfdfting");
     }
 }
 		
