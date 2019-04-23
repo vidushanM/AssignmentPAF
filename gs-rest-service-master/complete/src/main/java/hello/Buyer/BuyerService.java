@@ -21,4 +21,13 @@ public class BuyerService {
 	public static List<Buyer> retriveAllBuyers(){
 		return buyers;
 	}
+	
+	public static Buyer retrieveSpecificBuyer(int buyerId) {
+		for (Buyer buyer : buyers) {
+			if (buyer.get_buyer_id() == buyerId) {
+				return buyer;
+			}
+		}
+		return null;
+	} 
 }

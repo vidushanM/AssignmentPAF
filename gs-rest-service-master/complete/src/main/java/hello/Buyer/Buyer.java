@@ -11,7 +11,7 @@ public class Buyer {
 	        this.buyer_discription = buyer_description;
 	    }
 
-	    public long get_buyer_id() {
+	    public int get_buyer_id() {
 	        return buyer_id;
 	    }
 

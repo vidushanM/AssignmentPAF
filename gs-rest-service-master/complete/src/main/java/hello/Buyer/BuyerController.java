@@ -25,7 +25,7 @@ public class BuyerController {
 //		//return BuyerService.retriveAllBuyers();
 //	}
 
-	@RequestMapping("/testBuyer")
+	@GetMapping("/testBuyer")
     public List<Buyer> TestBuyer(@RequestParam(value="name", defaultValue="World") String name) {
 //		List<Buyer> buyers = new ArrayList<Buyer>();
 //		buyers.add(new Buyer(1, "Name1", "Des1"));
@@ -35,6 +35,12 @@ public class BuyerController {
 //        //return new Bu(12, "tesfdsfdfting");
 //        return buyers; 
 		return BuyerService.retriveAllBuyers();
+    }
+	
+	@GetMapping("/testBuyer/{buyerId}")
+	public  Buyer retrieveDetailsForBuyer(@PathVariable int buyerId) {
+		return BuyerService.retrieveSpecificBuyer(buyerId);
+	
     }
 }
 		
