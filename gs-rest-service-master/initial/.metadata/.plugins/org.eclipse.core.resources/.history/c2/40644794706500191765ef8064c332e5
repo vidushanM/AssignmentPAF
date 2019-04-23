@@ -1,0 +1,8 @@
+package assignment;
+
+
+public class BuyerService {
+
+	private static List<Buyer> buyers = new ArrayList<>();
+	
+}

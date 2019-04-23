@@ -1,0 +1,23 @@
+package assignment;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import assignment.BuyerService;
+
+
+
+@RestController
+public class BuyerController {
+	
+	@Autowired 
+	Private BuyerService buyerService;
+	
+	@GetMapping("/buyers/")
+	public <BuyerService> Buyer retriveDetailsForBuyers(@PathVariable String buyers) {
+		return BuyerService.retriveAllBuyers(buyers);
+	}
+
+}
