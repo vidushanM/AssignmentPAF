@@ -1,5 +1,6 @@
 package hello.Buyer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +26,15 @@ public class BuyerController {
 //	}
 
 	@RequestMapping("/testBuyer")
-    public Greeting TestBuyer(@RequestParam(value="name", defaultValue="World") String name) {
-        return new Greeting(12, "tesfdsfdfting");
+    public List<Buyer> TestBuyer(@RequestParam(value="name", defaultValue="World") String name) {
+//		List<Buyer> buyers = new ArrayList<Buyer>();
+//		buyers.add(new Buyer(1, "Name1", "Des1"));
+//		buyers.add(new Buyer(2, "Name2", "Des2"));
+//		buyers.add(new Buyer(3, "Name3", "Des3"));
+//		
+//        //return new Bu(12, "tesfdsfdfting");
+//        return buyers; 
+		return BuyerService.retriveAllBuyers();
     }
 }
 		
